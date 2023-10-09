@@ -3,3 +3,6 @@
 
 # express
 `$ npm install express`
+
+# nodemon
+`$ npm install -D nodemon`
