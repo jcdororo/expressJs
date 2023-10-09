@@ -6,3 +6,6 @@
 
 # nodemon
 `$ npm install -D nodemon`
+
+# hbs
+`$ npm install hbs`
