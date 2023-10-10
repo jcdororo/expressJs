@@ -3,7 +3,8 @@ const PORT = 4000;
 const path = require('path')
 
 const usersRouter = require('./routes/users.router')
-const postsRouter = require('./routes/posts.router')
+const postsRouter = require('./routes/posts.router');
+const { default: mongoose } = require('mongoose');
 
 const app = express();
 
@@ -14,6 +15,10 @@ app.set('vies', path.join(__dirname, 'views'));
 app.use('/static',express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
+
+mongoose.connect(`mongodb+srv://wnwlcks123:wnwlcks123@express-cluster.5v9rwcx.mongodb.net/?retryWrites=true&w=majority`)
+  .then(() => console.log('mongodb connected'))  
+  .catch(err => console.log(err))
 
 app.use((req, res, next) => {
   const start = Date.now();

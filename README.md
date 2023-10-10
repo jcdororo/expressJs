@@ -9,3 +9,6 @@
 
 # hbs
 `$ npm install hbs`
+
+# mongoose
+`$ npm install mongoose`
