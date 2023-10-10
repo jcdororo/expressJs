@@ -4,6 +4,7 @@ const path = require('path')
 
 const usersRouter = require('./routes/users.router')
 const postsRouter = require('./routes/posts.router');
+const productsRouter = require('./routes/products.router')
 const { default: mongoose } = require('mongoose');
 
 const app = express();
@@ -37,6 +38,7 @@ app.get('/', (req, res) => {
 
 app.use('/users', usersRouter)
 app.use('/posts', postsRouter)
+app.use('/products', productsRouter)
 
 
 
